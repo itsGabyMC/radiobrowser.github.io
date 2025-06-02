@@ -1,0 +1,116 @@
+:root {
+  --primary-color: #4c84ff;
+  --background-color: #f8f9fc;
+  --card-bg: #ffffff;
+  --text-color: #333;
+  --muted-color: #777;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: white;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.brand-logo {
+  max-height: 60px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+main {
+  flex: 1;
+  padding: 40px 20px;
+  padding-bottom: 120px;
+}
+
+.input-group input {
+  border-radius: 8px 0 0 8px;
+}
+
+.input-group .btn {
+  border-radius: 0 8px 8px 0;
+}
+
+.list-group-item {
+  background-color: var(--card-bg);
+  border: 1px solid #e1e4eb;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.1s ease;
+}
+
+.list-group-item:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.player-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  padding: 12px 20px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  height: 80px;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.player-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.volume-control {
+  width: 150px;
+}
+
+.bottom-text {
+  color: var(--muted-color);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100%;
+  z-index: 1;
+}
+
+.bottom-text.player-active {
+  margin-bottom: 80px;
+}
+
+main.container {
+  padding-bottom: 140px;
+}
